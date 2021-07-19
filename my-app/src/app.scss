@@ -9,6 +9,8 @@
     background-color: lightgoldenrodyellow;
     position: relative;
     top: 70px;
+    //when moving tyo diff sections from taskbar wont be instant/more smooth
+    scroll-behavior: smooth;
     ///snap scrolling key
     scroll-snap-type: y mandatory;
      //removes scrollbar from webpage* can still scroll

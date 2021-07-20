@@ -12,29 +12,39 @@ import {
 export default function Portfolio() {
 //when ever one list id is selected its going to be active class
   const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
     //dynamic active class
     const list = [ 
         {
-         id: "Featured",
+         id: "featured",
          title: "Featured",
         },
         {
-            id: "Web",
-             title:"Web Apps",
+            id: "web",
+             title:"web apps",
 
         },
           {
-              id:"Project",
+              id:"project",
               title:"Projects",
           },
     ];
 //switch case structure 
-      useEffect(() =>{ 
-      switch(selected){ 
-          case "featured":
-      }
-      }, [selected])
-
+   useEffect(() => {
+     switch(selected) { 
+         case "featured":
+             setData(featuredPortfolio);
+             break;
+             case "web":
+                 setData(webPortfolio);
+                 break;
+                  case "project": 
+                    setData(projectPortfolio);
+                       break;
+                        default: 
+                        setData(featuredPortfolio);
+     }
+   }, [selected]);
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -47,22 +57,19 @@ export default function Portfolio() {
                       id={item.id}
                       />
                 ))}
-            
             </ul>
                 <div className="container">
-                    <div className="item">
-                        <img src="assets/plansurfing.png" alt=""/>
-                        <h3>Web apps</h3>
-                    </div>
-                    <div className="item">
-                        <img src="assets/plansurfing.png" alt=""/>
-                        <h3>Front end apps</h3>
-                    </div>
-                    <div className="item">
-                        <img src="assets/plansurfing.png" alt=""/>
-                        <h3>Plan Surfing app</h3>
-                    </div>
-                </div>
-        </div>
-    )
+                    {data.map((d) => (
+                        <div className="item">
+                            
+                            <img 
+                            src={d.img}
+                            alt=""
+                            />
+                            <h3>{d.title}</h3>
+                            </div>
+                    ))}
+                     </div>
+               </div>
+    );
 }

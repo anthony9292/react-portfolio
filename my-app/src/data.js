@@ -5,12 +5,15 @@ export const featuredPortfolio = [
     id: 1,
     title: "Plan surfing app",
     img: "./assets/plansurfing.png",
+    
       
     }, 
     {
      id: 2,
      title: "Cup of Sugar Web app",
      img:  "./assets/cupfullfruites.jpg",
+    
+     
 
     },
 
@@ -40,7 +43,6 @@ export const featuredPortfolio = [
                img: "./assets/budget.png"
 
            },
-
     ];
 
      export const projectPortfolio = [
@@ -53,7 +55,8 @@ export const featuredPortfolio = [
           {
               id:2, 
               title: "note maker app",
-              img: "./assets/quiz.png",
+              img: "./assets/quiz.JPG",
+
           },
 
           { 

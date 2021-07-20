@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import PortfolioList from "../portfolioList/PortfolioList";
 import  "./portfolio.scss";
+import { 
+     featuredPortfolio,
+     webPortfolio,
+     projectPortfolio,
+} from "../../data";
+
+
+
 export default function Portfolio() {
 //when ever one list id is selected its going to be active class
   const [selected, setSelected] = useState("featured");
@@ -20,6 +28,13 @@ export default function Portfolio() {
               title:"Projects",
           },
     ];
+//switch case structure 
+      useEffect(() =>{ 
+      switch(selected){ 
+          case "featured":
+      }
+      }, [selected])
+
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>

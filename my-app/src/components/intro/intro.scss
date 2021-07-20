@@ -1,3 +1,29 @@
 .intro { 
-    background-color: lightslategrey;
+    background-color: white;
+    display: flex;
+
+
+    .left{ 
+        flex: 0.5;
+        overflow: hidden;
+        
+        .imgContainer{
+            width: 1140px;
+            height: 1100px;
+            float: right;
+            
+            
+
+            img{
+                width: 100%;
+            }
+        }
+
+    
+        
+    }
+
+    right{
+        flex: 0.5px
+    }
 }
